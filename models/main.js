@@ -4,15 +4,19 @@ var Models = {};
 
 Models.Person = Person;
 
-var me = {firstname: "Alli", lastname: "Cernoch"};
+// var me = {firstname: "Alli", lastname: "Cernoch"};
 
-Models.Person.create(me, function (err, person) {
-  console.log("Put myself into the database");
-});
+// Models.Person.create(me, function (err, person) {
+//   console.log("Put myself into the database");
+// });
 
-Models.Person.all(function(err, people){
-  console.log(people);
-});
+Models.Person.findBy('firstname', 'Alli', function (err, person) {
+  console.log("Checking for Alli in the database");
+})
+
+// Models.Person.all(function(err, people){
+//   console.log(people);
+// });
 
 // Models.Person.findBy("id", 1, function(err, person){
 //   console.log("found", person);
