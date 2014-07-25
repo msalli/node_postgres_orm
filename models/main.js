@@ -4,6 +4,12 @@ var Models = {};
 
 Models.Person = Person;
 
+var me = {firstname: "Alli", lastname: "Cernoch"};
+
+Models.Person.create(me, function (err, person) {
+  console.log("Put myself into the database");
+});
+
 Models.Person.all(function(err, people){
   console.log(people);
 });
