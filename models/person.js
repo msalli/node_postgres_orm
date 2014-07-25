@@ -8,7 +8,7 @@ function Person(params) {
 
 
 Person.all = function(callback){
-  db.query("YOUR QUERY HERE",[], function(err, res){
+  db.query("SELECT * FROM people",[], function(err, res){
     var allPeople = [];
     // do something here with res
     callback(err, allPeople);
@@ -24,9 +24,14 @@ Person.findBy = function(key, val, callback) {
 };
 
 
-
+//takes params and a callback
+//need to fill out random string to INSERT people
+//try adding some people in PSQL, then copy that command here
+//first element in the array goes to $1, second element goes to $2
+//the $ does some stuff in the background to protect from hackers
 Person.create = function(params, callback){
-  db.query("", [params.firstname, params.lastname], function(err, res){
+  db.query("INSERT INTO people (firstname, lastname) VALUES ($1, $2)", 
+    [params.firstname, params.lastname], function(err, res){
     var createdRow, newPerson;
     callback(err, newPerson);
   });
