@@ -4,19 +4,34 @@ var Models = {};
 
 Models.Person = Person;
 
-// var me = {firstname: "Alli", lastname: "Cernoch"};
 
+// JUST TESTING STUFF
+var me = {firstname: "Alli", lastname: "Cernoch"};
+
+// create test
 // Models.Person.create(me, function (err, person) {
-//   console.log("Put myself into the database");
+//   console.log("Put myself into the database " + person.firstname + " " + person.lastname);
 // });
 
-Models.Person.findBy('firstname', 'Alli', function (err, person) {
-  console.log("Checking for Alli in the database");
-})
+// findby test
+// Models.Person.findBy('id', 1, function (err, person) {
+//   console.log("Checking database: " + person);
+// });
 
+// all test
 // Models.Person.all(function(err, people){
 //   console.log(people);
 // });
+
+//delete test
+// Models.Person.findBy("id", 46, function (err, person){
+//   var id = 46;
+// person.destroy(function(err) {
+//   console.log("Deleted")
+// });
+// })
+
+
 
 // Models.Person.findBy("id", 1, function(err, person){
 //   console.log("found", person);
@@ -24,5 +39,7 @@ Models.Person.findBy('firstname', 'Alli', function (err, person) {
 //     console.log("UPDATED:", person)
 //   });
 // })
+
+
 
 module.exports = Models;
