@@ -2,7 +2,20 @@
 <html>
   <head>
   </head>
+  
   <body>
+    <p>Current Information</p>
+     <p>First name: <%= person.firstname %> </p>
+      <p>Last name: <%= person.lastname %> </p>
+      <p>Person's ID: <%= person.id %> </p>
 
+    <form method="post" action="/people/<%=person.id%>?_method=put"> 
+
+      <p><input type="text" name="person[firstname]" placeholder="change first name"></p>
+      <p><input type="text" name="person[lastname]" placeholder="change last name"></p>
+      <p><input type="submit" ></p>
+
+    </form>
+    
   </body>
 </html>
