@@ -3,7 +3,16 @@
   <head>
   </head>
   <body>
-    People Index
+    <h1> List of People </h1>
+
+    <% people.forEach(function (allPeople) { %>
+    <div>
+      <p><a href="/people/<%=allPeople.id%>"> <%= allPeople.firstname %> <%= allPeople.lastname %> </a></p>
+    </div>
+
+    <% }) %>
+    
+ 
 
   </body>
 </html>
