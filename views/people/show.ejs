@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+      
+      <p>First name: <%= person.firstname %> </p>
+      <p>Last name: <%= person.lastname %> </p>
+      <p>Person's ID: <%= person.id %> </p>
+
+      <button><a href="/people/<%=person.id%>/edit">Edit</a></button>
+
+      <form method="post" action="/people/<%=person.id%>?_method=delete">
+        <input type="submit" value="Delete Person">
+      </form>
+  </body>
+</html>
